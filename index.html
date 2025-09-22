@@ -23,6 +23,30 @@
       color: var(--celestial-white);
     }
 
+    /* Navigation */
+    nav {
+      background: black;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav div {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: var(--seraph-gold);
+    }
+
     .hero {
       text-align: center;
       padding: 100px 20px;
@@ -72,20 +96,51 @@
 
     .buttons a:hover {
       transform: scale(1.05);
-    }
+    }.product-card {
+  background: white;
+  border: 2px solid var(--seraph-gold);
+  border-radius: 10px;
+  padding: 20px;
+  width: 260px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <span style="color: var(--seraph-gold); font-weight: bold; font-size: 20px;">🦁 DigitalDoki</span>
+      <div>
+        <a href="#about">About</a>
+        <a href="#spotlight">Spotlight</a>
+        <a href="#resources">Resources</a>
+        <a href="#blog">Blog</a>
+        <a href="#chat">Chat</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <section class="hero">
     <h1>DIGITAL DOKI</h1>
     <p>Tested & Approved</p>
     <div class="buttons">
-      <a href="#" class="get-started">Get Started</a>
-      <a href="#" class="learn-more">Learn More</a>
+      <a href="#resources" class="get-started">Get Started</a>
+      <a href="#about" class="learn-more">Learn More</a>
     </div>
     <img src="https://raw.githubusercontent.com/digitaldoki/doki-assets/refs/heads/main/digitaldokimiongraphics.png" alt="Doki the Lion">
-  </section>  <!-- About Section -->
-  <section style="background: var(--celestial-white); color: black; padding: 60px 20px; text-align: center;">
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="background: var(--celestial-white); color: black; padding: 60px 20px; text-align: center;">
     <h2>About DigitalDoki</h2>
     <p style="max-width: 800px; margin: 20px auto; font-size: 20px; line-height: 1.6;">
       DigitalDoki is a disability-friendly hub for neurodivergent individuals, caregivers, and therapists. 
@@ -99,8 +154,10 @@
         "Roar! I'm Doki, and I’ll guide you on your journey!"
       </div>
     </div>
-  </section>  <!-- Spotlight Section -->
-  <section style="background: var(--radiant-lilac); color: black; padding: 60px 20px; text-align: center;">
+  </section>
+
+  <!-- Spotlight Section -->
+  <section id="spotlight" style="background: var(--radiant-lilac); color: black; padding: 60px 20px; text-align: center;">
     <h2>Creator Spotlight</h2>
     <p style="max-width: 800px; margin: 20px auto; font-size: 20px; line-height: 1.6;">
       Every month, DigitalDoki highlights an amazing neurodivergent creator. 🌟  
@@ -114,58 +171,64 @@
         </a>
       </div>
     </div>
-  </section>  <!-- Resources Section -->
-  <section style="background: var(--celestial-white); color: black; padding: 60px 20px; text-align: center;">
-    <h2>Doki-Approved Resources 🦁</h2>
-    <p>Hand-picked tools, printables, and products to support neurodivergent minds.</p>
-
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
-      <div style="background: white; border: 2px solid var(--seraph-gold); border-radius: 10px; padding: 20px; width: 250px;">
-        <img src="https://via.placeholder.com/250x150.png?text=Planner" style="width: 100%; border-radius: 8px;"/>
-        <h3>Focus Planner</h3>
-        <p>Organize your day with a neurodivergent-friendly planner.</p>
-        <a href="#" target="_blank" style="color: white; background: var(--sacred-navy); padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Buy Now</a>
-      </div>
-
-      <div style="background: white; border: 2px solid var(--seraph-gold); border-radius: 10px; padding: 20px; width: 250px;">
-        <img src="https://via.placeholder.com/250x150.png?text=Fidget+Kit" style="width: 100%; border-radius: 8px;"/>
-        <h3>Fidget Kit</h3>
-        <p>A bundle of sensory tools to boost focus and calm.</p>
-        <a href="#" target="_blank" style="color: white; background: var(--sacred-navy); padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Buy Now</a>
-      </div>
-
-      <div style="background: white; border: 2px solid var(--seraph-gold); border-radius: 10px; padding: 20px; width: 250px;">
-        <img src="https://via.placeholder.com/250x150.png?text=Ebook" style="width: 100%; border-radius: 8px;"/>
-        <h3>Kids Coding eBook</h3>
-        <p>Learn the basics of coding with fun, kid-friendly lessons.</p>
-        <a href="#" target="_blank" style="color: white; background: var(--sacred-navy); padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Download</a>
-      </div>
-    </div>
   </section>
-  <!-- Blog Section -->
-  <section style="background: var(--ethereal-sky); color: black; padding: 60px 20px; text-align: center;">
-    <h2>Doki’s Blog ✨</h2>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
-      <div style="background: white; border-radius: 10px; padding: 20px; width: 300px;">
-        <h3>5 Focus Hacks for ADHD</h3>
-        <p>Quick tips to boost productivity while staying kind to yourself.</p>
-        <a href="#" style="color: var(--cosmic-blue); font-weight: bold;">Read More →</a>
-      </div>
-      <div style="background: white; border-radius: 10px; padding: 20px; width: 300px;">
-        <h3>Printable Calm Cards</h3>
-        <p>Use Doki’s calming cards to manage big feelings anywhere.</p>
-        <a href="#" style="color: var(--cosmic-blue); font-weight: bold;">Read More →</a>
-      </div>
+
+  <!-- Resources Section -->
+<section id="resources" style="background: var(--celestial-white); color: black; padding: 60px 20px; text-align: center;">
+  <h2>Doki-Approved Resources 🦁</h2>
+  <p>Hand-picked tools, printables, and products to support neurodivergent minds.</p>
+
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
+    
+    <!-- Product Card 1 -->
+    <div class="product-card"><img src="https://via.placeholder.com/250x150.png?text=Planner" alt="Planner" style="width: 100%; border-radius: 8px;"/>
+      <h3 style="margin-top: 15px;">Focus Planner</h3>
+      <p>A daily planner designed to help neurodivergent minds stay organized.</p>
+      <a href="https://example.com/affiliate-link-1" target="_blank" 
+         style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
+        Buy Now
+      </a>
     </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x150.png?text=Fidget+Kit" alt="Fidget Kit" style="width: 100%; border-radius: 8px;"/>
+      <h3 style="margin-top: 15px;">Fidget Kit</h3>
+      <p>A bundle of sensory tools to boost focus and calm.</p>
+      <a href="https://example.com/affiliate-link-2" target="_blank" 
+         style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
+        Buy Now
+      </a>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x150.png?text=Coding+eBook" alt="Kids Coding eBook" style="width: 100%; border-radius: 8px;"/>
+      <h3 style="margin-top: 15px;">Kids Coding eBook</h3>
+      <p>A fun and simple introduction to coding for kids — Doki-approved!</p>
+      <a href="https://example.com/affiliate-link-3" target="_blank" 
+         style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
+        Download
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Blog Section -->
+  <section id="blog" style="background: var(--ethereal-sky); color: black; padding: 60px 20px; text-align: center;">
+    <h2>Doki’s Blog ✨</h2>
+    <!-- Blog content -->
   </section>
 
   <!-- Chat Section -->
-  <section style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center;">
+  <section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center;">
     <h2>Chat with Doki 🦁</h2>
-    <iframe src="http://127.0.0.1:7860" width="100%" height="600" style="border: 2px solid var(--seraph-gold); border-radius: 10px;">
+    <iframe src="https://huggingface.co/spaces/digitalDoki/digitaldoki-chat" width="100%" height="600" style="border: 2px solid var(--seraph-gold); border-radius: 10px;">
     </iframe>
-    <p style="margin-top: 10px;">Note: In testing, Doki runs locally. When deployed, this will be live on your site.</p>
   </section>
+
   <!-- Footer -->
   <footer style="background: black; color: white; text-align: center; padding: 20px;">
     <p>🦁 DigitalDoki © 2025 — Empowering Neurodivergent Minds</p>
@@ -174,7 +237,6 @@
       <a href="https://patreon.com/digitaldoki" target="_blank" style="color: var(--seraph-gold); margin: 0 10px;">❤️ Patreon</a>
     </p>
   </footer>
-
 
 </body>
 </html>
