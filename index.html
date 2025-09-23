@@ -5,7 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigitalDoki</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
+  <style>.hero-btn {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+.hero-btn.gold {
+  background: var(--seraph-gold);
+  color: black;
+}
+.hero-btn.gold:hover {
+  background: var(--sunset-orange);
+  color: white;
+}
+.hero-btn.navy {
+  background: var(--sacred-navy);
+  color: white;
+}
+.hero-btn.navy:hover {
+  background: var(--cosmic-blue);
+}
+
     :root {
       --seraph-gold: #FFD700;
       --sacred-navy: #1E3A8A;
@@ -125,24 +154,34 @@
     </div>
   </nav>
 
- <section style="text-align: center; padding: 80px 20px;">
-  <h1>🦁 Welcome to DigitalDoki</h1>
-  <p>Doki is a colorful lion mascot guiding neurodivergent individuals, caregivers, and creators with tools, tips, and friendly wisdom.</p>
+<!-- Hero Section -->
+<section style="text-align: center; padding: 100px 20px; background: linear-gradient(135deg, var(--neon-magenta), var(--sunset-orange)); color: white;">
+  <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 10px;">DIGITAL DOKI</h1>
+  <p style="font-size: 20px; margin-bottom: 30px;">Tested & Approved</p>
+
+  <!-- Buttons -->
+  <div style="margin-bottom: 40px;">
+    <a href="#chat" style="margin: 10px; background: var(--seraph-gold); color: black; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">Get Started</a>
+    <a href="#about" style="margin: 10px; background: var(--sacred-navy); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">Learn More</a>
+  </div>
 
   <!-- Doki Mascot Image -->
   <img src="https://raw.githubusercontent.com/digitaldoki/doki-assets/refs/heads/main/digitaldokimiongraphics.png" 
        alt="Doki Mascot" 
-       style="margin-top: 40px; max-width: 300px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.3);"/>
+       style="max-width: 300px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.3);"/>
 </section>
 
-<div class="divider">🐾 🐾 🐾</div>
 
 
-  <!-- About Section -->
-  <section id="about" style="background: var(--ethereal-sky); color: black; padding: 60px 20px; text-align: center;">
-    <h2>About DigitalDoki</h2>
-    <p>We blend education, products, and encouragement to empower neurodivergent minds and their caregivers.</p>
-  </section>
+<!-- About Section -->
+<section id="about" style="background: white; color: black; padding: 60px 20px; text-align: center;">
+  <h2>About DigitalDoki</h2>
+  <p style="max-width: 800px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+    DigitalDoki is a disability-friendly hub for neurodivergent individuals, caregivers, and therapists. 
+    Guided by Doki 🦁, our colorful lion mascot, we provide tools, resources, and digital products that 
+    are supportive, fun, and empowering.
+  </p>
+</section>
 
 <!-- Chat Section -->
 <section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
