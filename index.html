@@ -201,11 +201,21 @@
   </p>
 </section>
 
-<!-- Chat Section -->
 <section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
   <h2>Chat with Doki 🦁</h2>
-  <p>Ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
+  <p>Choose a mode and ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
 
+  <!-- Mode Buttons -->
+  <div style="margin: 20px 0;">
+    <button onclick="setMode('kids')" style="margin: 5px; padding: 10px 20px; border-radius: 20px; background: var(--seraph-gold); color: black; font-weight: bold; border: none; cursor: pointer;">
+      🧒 Kids Mode
+    </button>
+    <button onclick="setMode('caregiver')" style="margin: 5px; padding: 10px 20px; border-radius: 20px; background: var(--neon-magenta); color: white; font-weight: bold; border: none; cursor: pointer;">
+      👩 Caregiver Mode
+    </button>
+  </div>
+
+  <!-- Chat Frame -->
   <div style="
     max-width: 900px;
     margin: auto;
@@ -216,13 +226,23 @@
     border: 2px solid var(--seraph-gold);
   ">
     <iframe 
-      src="https://digitaldoki-digitaldoki-chat.hf.space"
+      id="doki-chat"
+      src="https://digitaldoki-digitaldoki-chat.hf.space?mode=kids"
       frameborder="0"
-      class="responsive-chat"
-      style="border: none;"
+      width="100%"
+      height="600"
+      style="border-radius: 15px; border: none;"
     ></iframe>
   </div>
 </section>
+
+<script>
+  function setMode(mode) {
+    const iframe = document.getElementById("doki-chat");
+    iframe.src = `https://digitaldoki-digitaldoki-chat.hf.space/?mode=${mode}`;
+  }
+</script>
+
 
 <!-- Sticky mobile button -->
 <a href="#chat" class="sticky-chat-btn">💬 Chat with Doki 🦁</a>
