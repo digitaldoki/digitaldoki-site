@@ -46,14 +46,14 @@
       color: var(--sunset-orange);
     }
 
-    /* Pawprint Divider */
+    /* Divider */
     .divider {
       text-align: center;
       font-size: 30px;
       margin: 30px 0;
     }
 
-    /* Resource + Blog Cards */
+    /* Cards */
     .card {
       background: var(--celestial-white);
       border: 2px solid var(--seraph-gold);
@@ -69,20 +69,15 @@
       box-shadow: 0 12px 24px rgba(0,0,0,0.3);
     }
 
-    /* Responsive iframe */
+    /* Responsive chat */
     .responsive-chat {
       width: 100%;
-      height: 600px;
+      min-height: 700px;
       border-radius: 15px;
-    }
-    @media (max-width: 768px) {
-      .responsive-chat { height: 500px; }
-    }
-    @media (max-width: 480px) {
-      .responsive-chat { height: 450px; }
+      overflow: hidden;
     }
 
-    /* Sticky button for mobile */
+    /* Sticky button */
     .sticky-chat-btn {
       display: none;
       position: fixed;
@@ -111,13 +106,10 @@
 
   <!-- Navigation -->
   <nav>
-    <!-- Logo + Title -->
     <div style="display: flex; align-items: center; gap: 10px;">
       <img src="https://raw.githubusercontent.com/digitaldoki/doki-assets/refs/heads/main/digitaldokimiongraphics.png" alt="Doki Logo" style="height: 40px; border-radius: 50%;"/>
       <span style="color: var(--seraph-gold); font-weight: bold; font-size: 20px;">DigitalDoki</span>
     </div>
-
-    <!-- Links -->
     <div>
       <a href="#about">About</a>
       <a href="#resources">Resources</a>
@@ -126,113 +118,79 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Welcome -->
   <section style="text-align: center; padding: 80px 20px;">
     <h1>🦁 Welcome to DigitalDoki</h1>
     <p>Doki is a colorful lion mascot guiding neurodivergent individuals, caregivers, and creators with tools, tips, and friendly wisdom.</p>
-
-    <!-- Doki Mascot Image -->
-    <img src="https://raw.githubusercontent.com/digitaldoki/doki-assets/refs/heads/main/digitaldokimiongraphics.png" 
-         alt="Doki Mascot" 
-         style="margin-top: 40px; max-width: 300px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.3);"/>
+    <img src="https://raw.githubusercontent.com/digitaldoki/doki-assets/refs/heads/main/digitaldokimiongraphics.png" alt="Doki Mascot" style="margin-top: 40px; max-width: 300px; border-radius: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.3);"/>
   </section>
 
   <div class="divider">🐾 🐾 🐾</div>
 
-  <!-- About Section -->
-  <section id="about" style="background: var(--ethereal-sky); color: black; padding: 60px 20px; text-align: center;">
+  <!-- About -->
+  <section id="about" style="background: var(--celestial-white); color: black; padding: 60px 20px; text-align: center; border: 2px solid var(--seraph-gold);">
     <h2>About DigitalDoki</h2>
     <p>We blend education, products, and encouragement to empower neurodivergent minds and their caregivers.</p>
   </section>
 
+  <!-- Chat -->
+  <section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
+    <h2>Chat with Doki 🦁</h2>
+    <p>Ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
+    <div style="max-width: 900px; margin: auto; padding: 20px; background: var(--celestial-white); border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); border: 2px solid var(--seraph-gold); overflow: hidden;">
+      <iframe 
+        id="doki-chat"
+        src="https://digitaldoki-digitaldoki-chat.hf.space"
+        frameborder="0"
+        class="responsive-chat"
+        style="border: none; background: var(--ethereal-sky);"
+      ></iframe>
+    </div>
+  </section>
 
-
-  
-
-
-<!-- Chat Section -->
-<section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
-  <h2>Chat with Doki 🦁</h2>
-  <p>Ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
-
-  <div style="
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background: var(--celestial-white);
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    border: 2px solid var(--seraph-gold);
-  ">
-    <iframe 
-      id="doki-chat"
-      src="https://digitaldoki-digitaldoki-chat.hf.space"
-      frameborder="0"
-      class="responsive-chat"
-      style="border: none; background: var(--ethereal-sky);"
-    ></iframe>
-  </div>
-</section>
-
-
-
-  <!-- Sticky mobile button -->
+  <!-- Sticky button -->
   <a href="#chat" class="sticky-chat-btn">💬 Chat with Doki 🦁</a>
 
   <div class="divider">🐾 🐾 🐾</div>
 
-  <!-- Resources Section -->
+  <!-- Resources -->
   <section id="resources" style="background: var(--ethereal-sky); color: black; padding: 60px 20px; text-align: center;">
     <h2>Doki-Approved Resources 🦁</h2>
     <p>Hand-picked tools, printables, and products to support neurodivergent minds.</p>
-
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
       <div class="card">
         <img src="https://via.placeholder.com/250x150.png?text=Planner" alt="Planner" style="width: 100%; border-radius: 10px;"/>
         <h3 style="margin-top: 15px;">Focus Planner</h3>
         <p>A daily planner designed to help neurodivergent minds stay organized.</p>
-        <a href="https://example.com/affiliate-link-1" target="_blank"
-           style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
-          Buy Now
-        </a>
+        <a href="https://example.com/affiliate-link-1" target="_blank" style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Buy Now</a>
       </div>
-
       <div class="card">
         <img src="https://via.placeholder.com/250x150.png?text=Fidget+Kit" alt="Fidget Kit" style="width: 100%; border-radius: 10px;"/>
         <h3 style="margin-top: 15px;">Fidget Kit</h3>
         <p>A bundle of sensory tools to boost focus and calm.</p>
-        <a href="https://example.com/affiliate-link-2" target="_blank"
-           style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
-          Buy Now
-        </a>
+        <a href="https://example.com/affiliate-link-2" target="_blank" style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Buy Now</a>
       </div>
-
       <div class="card">
         <img src="https://via.placeholder.com/250x150.png?text=Coding+eBook" alt="Kids Coding eBook" style="width: 100%; border-radius: 10px;"/>
         <h3 style="margin-top: 15px;">Kids Coding eBook</h3>
         <p>A fun and simple introduction to coding for kids — Doki-approved!</p>
-        <a href="https://example.com/affiliate-link-3" target="_blank"
-           style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
-          Download
-        </a>
+        <a href="https://example.com/affiliate-link-3" target="_blank" style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Download</a>
       </div>
     </div>
   </section>
 
   <div class="divider">🐾 🐾 🐾</div>
 
-  <!-- Blog Section -->
+  <!-- Blog -->
   <section id="blog" style="background: var(--radiant-lilac); color: black; padding: 60px 20px; text-align: center;">
     <h2>Doki’s Blog</h2>
     <p>Articles, tips, and stories to inspire and support you.</p>
-
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 40px;">
       <div class="card" style="width: 300px;">
         <h3>🦁 5 Focus Hacks for ADHD</h3>
         <p>Quick tips from Doki to help boost focus and keep your day on track.</p>
         <a href="blog1.html" style="display:inline-block; margin-top:10px; background: var(--sacred-navy); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">Read More</a>
       </div>
-
       <div class="card" style="width: 300px;">
         <h3>🦁 Why Coding Builds Confidence</h3>
         <p>Doki explains how learning code helps kids with problem-solving and creativity.</p>
@@ -243,42 +201,33 @@
 
   <div class="divider">🐾 🐾 🐾</div>
 
-  <!-- Sticky mobile button -->
-  <a href="#chat" class="sticky-chat-btn">💬 Chat with Doki 🦁</a>
-
   <!-- Footer -->
   <footer style="background: black; color: var(--celestial-white); text-align: center; padding: 30px 20px; margin-top: 60px;">
     <p style="margin: 0; font-size: 18px;">🦁 Thanks for visiting DigitalDoki!</p>
     <p style="margin: 10px 0;">Support the project:</p>
-
-    <!-- Support Links -->
     <div style="margin: 15px 0;">
-      <a href="https://www.buymeacoffee.com/digitaldoki" target="_blank"
-         style="margin: 0 10px; background: var(--seraph-gold); color: black; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
-        ☕ Buy Me a Coffee
-      </a>
-      <a href="https://www.patreon.com/digitaldoki" target="_blank"
-         style="margin: 0 10px; background: var(--neon-magenta); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">
-        ❤️ Patreon
-      </a>
+      <a href="https://www.buymeacoffee.com/digitaldoki" target="_blank" style="margin: 0 10px; background: var(--seraph-gold); color: black; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">☕ Buy Me a Coffee</a>
+      <a href="https://www.patreon.com/digitaldoki" target="_blank" style="margin: 0 10px; background: var(--neon-magenta); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold;">❤️ Patreon</a>
     </div>
-
-    <!-- Social Links with Icons -->
     <div style="margin-top: 15px; font-size: 24px;">
-      <a href="https://twitter.com/YourHandle" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/YourHandle" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com/YourChannel" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;">
-        <i class="fab fa-youtube"></i>
-      </a>
+      <a href="https://twitter.com/YourHandle" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/YourHandle" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/YourChannel" target="_blank" style="color: var(--seraph-gold); margin: 0 15px;"><i class="fab fa-youtube"></i></a>
     </div>
-
     <p style="margin-top: 20px; font-size: 14px; color: gray;">© 2025 DigitalDoki. All rights reserved.</p>
   </footer>
 
+  <!-- Restore last mode -->
+  <script>
+    function restoreMode() {
+      const saved = localStorage.getItem("dokiMode");
+      if (saved) {
+        const iframe = document.getElementById("doki-chat");
+        iframe.src = `https://digitaldoki-digitaldoki-chat.hf.space/?mode=${saved}`;
+      }
+    }
+    restoreMode();
+  </script>
 
 </body>
 </html>
