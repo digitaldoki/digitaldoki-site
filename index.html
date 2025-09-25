@@ -146,19 +146,29 @@
   </section>
 
   <!-- Chat Section -->
-  <section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
-    <h2>Chat with Doki 🦁</h2>
-    <p>Choose a mode and ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
+<section id="chat" style="background: var(--sacred-navy); color: white; padding: 60px 20px; text-align: center; border-top: 4px solid var(--seraph-gold); border-bottom: 4px solid var(--seraph-gold);">
+  <h2>Chat with Doki 🦁</h2>
+  <p>Ask me anything — I’m here to guide, encourage, and roar with wisdom!</p>
 
-    <!-- Mode Buttons -->
-    <div style="margin: 20px 0;">
-      <button onclick="setMode('kids')" style="margin: 5px; padding: 10px 20px; border-radius: 20px; background: var(--seraph-gold); color: black; font-weight: bold; border: none; cursor: pointer;">
-        🧒 Kids Mode
-      </button>
-      <button onclick="setMode('caregiver')" style="margin: 5px; padding: 10px 20px; border-radius: 20px; background: var(--neon-magenta); color: white; font-weight: bold; border: none; cursor: pointer;">
-        👩 Caregiver Mode
-      </button>
-    </div>
+  <div style="
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: var(--celestial-white);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 2px solid var(--seraph-gold);
+  ">
+    <iframe 
+      id="doki-chat"
+      src="https://digitaldoki-digitaldoki-chat.hf.space"
+      frameborder="0"
+      class="responsive-chat"
+      style="border: none; background: var(--ethereal-sky);"
+    ></iframe>
+  </div>
+</section>
+
 
     <!-- Chat Frame -->
     <div style="
