@@ -1,0 +1,7 @@
+# Core AI + UI
+gradio==4.44.0
+openai==1.42.0
+
+# Force correct networking libraries (fixes the "proxies" bug)
+httpx==0.27.0
+httpcore==1.0.5
